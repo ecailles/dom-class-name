@@ -1,0 +1,76 @@
+{
+    "name"             : "ecailles/dom-class-name",
+    "description"      : "A library for DOM class name generation (BEM syntax etc.)",
+    "type"             : "library",
+    "keywords"         : [
+        "dom",
+        "html",
+        "css",
+        "bem"
+    ],
+    "homepage"         : "https://github.com/ecailles/dom-class-name",
+    "license"          : "MIT",
+    "authors"          : [
+        {
+            "name"    : "Whizark",
+            "email"   : "contact@whizark.com",
+            "homepage": "http://whizark.com",
+            "role"    : "Developer"
+        }
+    ],
+    "support"          : {
+        "email" : "contact@whizark.com",
+        "issues": "https://github.com/ecailles/dom-class-name/issues",
+        "wiki"  : "https://github.com/ecailles/dom-class-name/wiki",
+        "source": "https://github.com/ecailles/dom-class-name"
+    },
+    "require"          : {
+        "php": ">=5.5.0"
+    },
+    "require-dev"      : {
+        "squizlabs/php_codesniffer": "^2.5.0",
+        "phpspec/phpspec"          : "^2.4.1",
+        "apigen/apigen"            : "^4.1.2"
+    },
+    "autoload"         : {
+        "psr-4": {
+            "Ecailles\\DomClassName\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable"    : true,
+    "scripts"          : {
+        "test"   : [
+            "phpcs --colors",
+            "phpspec run -f pretty --no-code-generation --ansi"
+        ],
+        "docs"   : [
+            "apigen generate -d api/"
+        ],
+        "test-ci": [
+            "phpcs --colors",
+            "phpspec run -f pretty --no-code-generation --ansi"
+        ]
+    },
+    "archive"          : {
+        "exclude": [
+            ".gitattributes",
+            ".gitignore",
+            ".editorconfig",
+            "package.json",
+            ".remarkignore",
+            ".remarkrc",
+            "composer.json",
+            "phpcs.xml.dist",
+            "phpspec.yml.dist",
+            "/spec/",
+            "apigen.neon",
+            ".travis.yml"
+        ]
+    },
+    "extra"            : {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

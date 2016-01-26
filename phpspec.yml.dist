@@ -1,0 +1,17 @@
+suites:
+  default:
+    namespace: Ecailles\DomClassName
+    spec_prefix: spec
+    src_path: %paths.config%/src
+    spec_path: %paths.config%
+    psr4_prefix: Ecailles\DomClassName
+
+formatter:
+    name: progress
+
+code_generation: true
+stop_on_failure: true
+
+extensions:
+
+bootstrap:
