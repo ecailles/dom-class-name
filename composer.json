@@ -29,7 +29,7 @@
     },
     "require-dev"      : {
         "squizlabs/php_codesniffer": "^2.5.0",
-        "phpspec/phpspec"          : "^2.4.1",
+        "crysalead/kahlan"         : "^2.1.0",
         "apigen/apigen"            : "^4.1.2"
     },
     "autoload"         : {
@@ -37,19 +37,24 @@
             "Ecailles\\DomClassName\\": "src/"
         }
     },
+    "autoload-dev"     : {
+        "psr-4": {
+            "Specs\\Ecailles\\DomClassName\\": "specs/"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable"    : true,
     "scripts"          : {
         "test"   : [
             "phpcs --colors",
-            "phpspec run -f pretty --no-code-generation --ansi"
+            "kahlan --src=src --spec=specs --no-header"
         ],
         "docs"   : [
             "apigen generate -d api/"
         ],
         "test-ci": [
             "phpcs --colors",
-            "phpspec run -f pretty --no-code-generation --ansi"
+            "kahlan --src=src --spec=specs --no-header"
         ]
     },
     "archive"          : {
@@ -62,8 +67,7 @@
             ".remarkrc",
             "composer.json",
             "phpcs.xml.dist",
-            "phpspec.yml.dist",
-            "/spec/",
+            "/specs/",
             "apigen.neon",
             ".travis.yml"
         ]
