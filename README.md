@@ -12,7 +12,7 @@
 composer require ecailles/dom-class-name
 ```
 
-## Usage
+## Basic Usage
 
 ### Block
 
@@ -61,6 +61,85 @@ $classname = (new Bem())
     ->element('element')->modifier('element-modifier')
     ->classname(['class1', 'class2'])
     ->get();
+```
+
+## Prefixing
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'prefix-block'
+$classname = (new Bem())->prefix('prefix')->block('block')->value();
+```
+
+or
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'prefix-block'
+$classname = (new Bem('prefix'))->block('block')->value();
+```
+
+## Custom Separators
+
+### Prefix Separator
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'prefix__block'
+$classname = (new Bem())->prefix('prefix')->prefixSeparator('__')
+    ->block('block')->value();
+```
+
+or
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'prefix__block'
+$classname = (new Bem('prefix', '__'))->block('block')->value();
+```
+
+### Element Separator
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block-element'
+$classname = (new Bem())->elementSeparator('-')
+    ->block('block')->element('element')->value();
+```
+
+or
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block-element'
+$classname = (new Bem(null, null, '-'))
+    ->block('block')->element('element')->value();
+```
+
+### Modifier Separator
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block-modifier'
+$classname = (new Bem())->modifierSeparator('-')
+    ->block('block')->element('modifier')->value();
+```
+
+or
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block-modifier'
+$classname = (new Bem(null, null, null, '-'))
+    ->block('block')->modifier('modifier')->value();
 ```
 
 [stable-image]: https://poser.pugx.org/ecailles/dom-class-name/v/stable
