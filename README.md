@@ -102,6 +102,20 @@ $classname = (new Bem())
     ->value();
 ```
 
+## Cloning (PHP 5.6 or earlier are also supported)
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+$block = (new Bem())->block('block');
+
+// 'block__element1'
+$element1 = $block->clone()->element('element1')->value();
+
+// 'block__element2'
+$element2 = $block->clone()->element('element2')->value();
+```
+
 ## Prefixing
 
 ```php
