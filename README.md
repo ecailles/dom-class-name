@@ -50,6 +50,19 @@ $classname = (new Bem())
     ->value();
 ```
 
+## Explicit Modifier
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block--block-modifier__element--element-modifier'
+$classname = (new Bem())
+    ->blockModifier('block-modifier')
+    ->elementModifier('element-modifier')
+    ->block('block')->element('element')
+    ->value();
+```
+
 ### Class names as array
 
 ```php
