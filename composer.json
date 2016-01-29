@@ -55,7 +55,7 @@
         ],
         "test-ci": [
             "phpcs --colors",
-            "kahlan --src=src --spec=specs --clover=build/logs/clover.xml --no-header"
+            "kahlan --src=src --spec=specs --clover=clover.xml --no-header"
         ]
     },
     "archive"          : {
