@@ -3,4 +3,5 @@ npm-debug.log
 /composer.lock
 /vendor/
 /clover.xml
+/coveralls-upload.json
 /api/
