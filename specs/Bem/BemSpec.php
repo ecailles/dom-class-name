@@ -395,6 +395,18 @@ describe('Bem', function () {
         });
     });
 
+    describe('->clone()', function () {
+        beforeEach(function () {
+            $this->bem = new Bem();
+        });
+
+        it('returns a clone', function () {
+            $subject = $this->bem->clone();
+
+            expect($subject)->toBeAnInstanceOf($this->bem)->not->toBe($this->bem);
+        });
+    });
+
     describe('->__toString()', function () {
         it('returns the same string as value()', function () {
             $bem = $this->bem

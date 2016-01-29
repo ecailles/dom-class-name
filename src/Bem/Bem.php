@@ -66,6 +66,13 @@ class Bem
         return $this->value();
     }
 
+    public function __call($name, $arguments)
+    {
+        if ($name === 'clone') {
+            return clone $this;
+        }
+    }
+
     public function prefix($name)
     {
         $this->prefix = $name;
