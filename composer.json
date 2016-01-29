@@ -1,6 +1,6 @@
 {
     "name"             : "ecailles/dom-class-name",
-    "description"      : "A library for DOM class name generation (BEM syntax etc.)",
+    "description"      : "A DOM class name generation library (BEM syntax class name builder etc.)",
     "type"             : "library",
     "keywords"         : [
         "dom",
