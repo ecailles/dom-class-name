@@ -18,22 +18,49 @@ use Nette\Http\Context;
  */
 class Bem
 {
+    /**
+     * @var string The current context.
+     */
     protected $context = Contexts::NORMAL;
 
+    /**
+     * @var string|null The prefix.
+     */
     protected $prefix;
 
+    /**
+     * @var string The prefix separator.
+     */
     protected $prefixSeparator;
 
+    /**
+     * @var string[] The Block names.
+     */
     protected $blocks = [];
 
+    /**
+     * @var string[] The Element names.
+     */
     protected $elements = [];
 
+    /**
+     * @var string The Element separator.
+     */
     protected $elementSeparator;
 
+    /**
+     * @var string[] The contexts and Modifier names.
+     */
     protected $modifiers = [];
 
+    /**
+     * @var string The Modifier separator.
+     */
     protected $modifierSeparator;
 
+    /**
+     * @var string The plain class names.
+     */
     protected $classes = [];
 
     /**
@@ -61,11 +88,24 @@ class Bem
         ];
     }
 
+    /**
+     * Returns the string representation of the instance.
+     *
+     * @return string The string representation.
+     */
     public function __toString()
     {
         return $this->value();
     }
 
+    /**
+     * The magic method that is triggered when invoking an inaccessible method in an object context.
+     *
+     * @param string $name The name of the method being called.
+     * @param mixed[] $arguments The arguments of the method being called.
+     *
+     * @return Bem|void A cloned instance of Bem when the method name is `clone`.
+     */
     public function __call($name, $arguments)
     {
         if ($name === 'clone') {
@@ -73,6 +113,13 @@ class Bem
         }
     }
 
+    /**
+     * Changes the prefix.
+     *
+     * @param string $name The prefix to change.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function prefix($name)
     {
         $this->prefix = $name;
@@ -80,6 +127,13 @@ class Bem
         return $this;
     }
 
+    /**
+     * Changes the prefix separator.
+     *
+     * @param string $separator The prefix separator to change.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function prefixSeparator($separator)
     {
         $this->prefixSeparator = $separator;
@@ -87,6 +141,13 @@ class Bem
         return $this;
     }
 
+    /**
+     * Adds Block name(s).
+     *
+     * @param string|string[] $names The name(s) to add.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function block($names)
     {
         $this->context = Contexts::BLOCK;
@@ -96,6 +157,13 @@ class Bem
         return $this;
     }
 
+    /**
+     * Adds Block Modifier name(s).
+     *
+     * @param string|string[] $names The Block Modifier name(s) to add.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function blockModifier($names)
     {
         $names                            = is_array($names) ? $names : [$names];
@@ -104,6 +172,13 @@ class Bem
         return $this;
     }
 
+    /**
+     * Adds Element name(s).
+     *
+     * @param string|string[] $names The Element name(s) to add.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function element($names)
     {
         $this->context  = Contexts::ELEMENT;
@@ -113,6 +188,13 @@ class Bem
         return $this;
     }
 
+    /**
+     * Changes the Element separator.
+     *
+     * @param string $separator The Element separator to change.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function elementSeparator($separator)
     {
         $this->elementSeparator = $separator;
@@ -120,6 +202,13 @@ class Bem
         return $this;
     }
 
+    /**
+     * Adds Element Modifier name(s).
+     *
+     * @param string|string[] $names The Element Modifier name(s) to add.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function elementModifier($names)
     {
         $names                              = is_array($names) ? $names : [$names];
@@ -128,6 +217,13 @@ class Bem
         return $this;
     }
 
+    /**
+     * Adds contextual Modifier name(s).
+     *
+     * @param string|string[] $names The contextual Modifier name(s) to add.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function modifier($names)
     {
         $names                           = is_array($names) ? $names : [$names];
@@ -136,6 +232,13 @@ class Bem
         return $this;
     }
 
+    /**
+     * Changes the Modifier separator.
+     *
+     * @param string $separator The Modifier separator to change.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function modifierSeparator($separator)
     {
         $this->modifierSeparator = $separator;
@@ -143,6 +246,13 @@ class Bem
         return $this;
     }
 
+    /**
+     * Adds plain class name(s).
+     *
+     * @param string|string[] $classes The class name(s) to add.
+     *
+     * @return Bem The current instance of Bem.
+     */
     public function classname($classes)
     {
         $classes       = is_array($classes) ? $classes : [$classes];
@@ -151,6 +261,11 @@ class Bem
         return $this;
     }
 
+    /**
+     * Builds and gets the class name(s) as an array.
+     *
+     * @return string[] An array of the class name(s).
+     */
     public function get()
     {
         $this->mergeContextualModifiers();
@@ -170,51 +285,99 @@ class Bem
         return array_unique($classes);
     }
 
+    /**
+     * Builds and gets the class name(s) as a string.
+     *
+     * @return string The class name(s) string.
+     */
     public function value()
     {
         return implode(' ', $this->get());
     }
 
+    /**
+     * Returns whether Block name(s) has/have been added.
+     *
+     * @return bool True if Block name(s) has/have been added, false otherwise.
+     */
     protected function hasBlock()
     {
         return (count($this->blocks) > 0);
     }
 
+    /**
+     * Gets the Block Modifier name(s) that has/have been added.
+     *
+     * @return string[] The Block Modifier name(s).
+     */
     protected function getBlockModifiers()
     {
         return $this->modifiers[Contexts::BLOCK];
     }
 
+    /**
+     * Returns whether Block Modifier name(s) has/have been added.
+     *
+     * @return bool True if Block Modifier name(s) has/have been added, false otherwise.
+     */
     protected function hasBlockModifier()
     {
         return (count($this->getBlockModifiers()) > 0);
     }
 
+    /**
+     * Returns whether Element name(s) has/have been added.
+     *
+     * @return bool True if Element name(s) has/have been added, false otherwise.
+     */
     protected function hasElement()
     {
         return (count($this->elements) > 0);
     }
 
+    /**
+     * Gets the Block Modifier name(s) that has/have been added.
+     *
+     * @return string[] The Block Modifier name(s).
+     */
     protected function getElementModifiers()
     {
         return $this->modifiers[Contexts::ELEMENT];
     }
 
+    /**
+     * Returns whether Element Modifier name(s) has/have been added.
+     *
+     * @return bool True if Element Modifier name(s) has/have been added, false otherwise.
+     */
     protected function hasElementModifier()
     {
         return (count($this->getElementModifiers()) > 0);
     }
 
+    /**
+     * Gets the contextual Modifier name(s).
+     *
+     * @return string[] The contextual Modifier name(s).
+     */
     protected function getContextualModifiers()
     {
         return $this->modifiers[Contexts::NORMAL];
     }
 
+    /**
+     * Returns whether contextual Modifier name(s) has/have been added.
+     *
+     * @return bool True if contextual Modifier name(s) has/have been added, false otherwise.
+     */
     protected function hasContextualModifier()
     {
         return (count($this->getContextualModifiers()) > 0);
     }
 
+    /**
+     * Merges contextual Modifier name(s) with Block/Element Modifier name(s) based on the current context.
+     */
     protected function mergeContextualModifiers()
     {
         if ($this->context === Contexts::NORMAL || !$this->hasContextualModifier()) {
@@ -230,6 +393,11 @@ class Bem
         $this->modifiers[Contexts::NORMAL] = [];
     }
 
+    /**
+     * Creates a set of the Block name(s).
+     *
+     * @return string[] The created set of the Block name(s).
+     */
     protected function createBlockSet()
     {
         $prefix = ($this->prefix !== null && $this->prefix !== '') ? ($this->prefix . $this->prefixSeparator) : '';
@@ -240,6 +408,11 @@ class Bem
         return $set;
     }
 
+    /**
+     * Creates a set of the Block Modifier name(s).
+     *
+     * @return string[] The created set of the Block Modifier name(s).
+     */
     protected function createBlockModifierSet()
     {
         $set = array_map(function ($modifiers) {
@@ -249,6 +422,11 @@ class Bem
         return $set;
     }
 
+    /**
+     * Creates a set of the Element name(s).
+     *
+     * @return string[] The created set of the Element name(s).
+     */
     protected function createElementSet()
     {
         $prefix = ($this->prefix !== null && $this->prefix !== '') ? ($this->prefix . $this->prefixSeparator) : '';
@@ -261,6 +439,11 @@ class Bem
         return $set;
     }
 
+    /**
+     * Creates a set of the Element Modifier name(s).
+     *
+     * @return string[] The created set of the Element Modifier name(s).
+     */
     protected function createElementModifierSet()
     {
         $set = array_map(function ($modifiers) {
@@ -270,6 +453,11 @@ class Bem
         return $set;
     }
 
+    /**
+     * Creates sets of the Block, Element, Modifier name(s) based on the state.
+     *
+     * @return string[] The sets of the items.
+     */
     protected function createSets()
     {
         $sets = [];
@@ -295,6 +483,13 @@ class Bem
         return $sets;
     }
 
+    /**
+     * Creates Cartesian product with given sets of name(s).
+     *
+     * @param array[] $sets The sets of the name(s).
+     *
+     * @return array[] The created Cartesian product.
+     */
     protected function createCartesianProduct(array $sets = [])
     {
         if (count($sets) === 0) {
