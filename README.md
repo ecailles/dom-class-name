@@ -50,7 +50,7 @@ $classname = (new Bem())
     ->value();
 ```
 
-## Explicit Modifier
+### Explicit Modifier
 
 ```php
 use Ecailles\DomClassName\Bem\Bem;
