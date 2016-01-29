@@ -11,6 +11,58 @@
 ```sh
 composer require ecailles/dom-class-name
 ```
+
+## Usage
+
+### Block
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block--block-modifier'
+$classname = (new Bem())
+    ->block('block')->modifier('block-modifier')
+    ->value();
+```
+
+### Element
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block--block-modifier__element-modifier'
+$classname = (new Bem())
+    ->block('block')->modifier('block-modifier')
+    ->element('element')->modifier('element-modifier')
+    ->value();
+```
+
+### Classes
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block--block-modifier__element-modifier class1 class2'
+$classname = (new Bem())
+    ->block('block')->modifier('block-modifier')
+    ->element('element')->modifier('element-modifier')
+    ->classname(['class1', 'class2'])
+    ->value();
+```
+
+### Class names as array
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// ['block--block-modifier__element-modifier', 'class1', 'class2']
+$classname = (new Bem())
+    ->block('block')->modifier('block-modifier')
+    ->element('element')->modifier('element-modifier')
+    ->classname(['class1', 'class2'])
+    ->value();
+```
+
 [stable-image]: https://poser.pugx.org/ecailles/dom-class-name/v/stable
 [stable-url]: https://packagist.org/packages/ecailles/dom-class-name
 
