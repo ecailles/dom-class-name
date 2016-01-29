@@ -8,6 +8,10 @@ php:
     - '7.0'
     - hhvm
 
+env:
+    global:
+        secure: WiZ3/tU1v1h28+W/KnfnR0uqdcxI5ORc9n696PeZl3urlBCIuAXnt+w2HnCD1QLxYbtVpXsX+GVENUZJcAKGdPyCL/vl1icYaaQg9O9WSviiYK1/yOZ8GeR4EIOdhKB0z+yhIG4zWlJaobQ2bnDglHKWAaznQlpA0cxliZSld+d37ovcrET0vb8OQm7YlZKQd1Zh/F/fwpTpSdF7Ig06n+2O5rPn8mJgcOJdozY9tTJFqzZ1+syVqQEwbAo/5BQUz8pKtwTbqm87r5UwceT2fOZq32H+DjSQ9rhcZals7TAMV8froTKcE/ohRJDXGgkq7ngnrk9opUJzv+v6Qul9rBwF/vw0IO1D3Eo7dC1TWOzIapLR8liNuB+XH89F5iKGJLMqNlzRRnJf92uSSSGMj9B2IWm4spGpfr9p4q+3XtKHU+g7AktwAZrTY/6altT4D4xs/GCmdfrhbLz8z9POOSSC4G0pUoU2Aop94DX1m5fyjtyfPMCA4byqAmk+u2PTVPo3sXtriL8rrjn9TEyQ+h5evtZl4LPJjgUCADagCYIhOeijw2M2VPrPClwyhpSitAdBDAYffa1tV2wLeqMS77n3JNkobY6W1/zcFGK5mBITBeWaLvScR31I7CeEAJE0gASonO6G2roScBXcktr+ilMZWn8w8cv/ogw/BtLdnPY=
+
 matrix:
     fast_finish: true
     allow_failures:
@@ -37,6 +41,25 @@ script:
 
 after_script:
     - vendor/bin/coveralls --verbose
+
+after_success:
+    - APIGEN=false
+    - if [ "$TRAVIS_PHP_VERSION" = '5.6' ] && [ "$TRAVIS_BRANCH" = 'master' ] && [ "$TRAVIS_PULL_REQUEST" = 'false' ]; then APIGEN=true; fi
+    - if $APIGEN; then BUILD_PATH="$(pwd)"; fi
+    - if $APIGEN; then REPOSITORY=${REPOSITORY:-"https://${GH_TOKEN}@github.com/$TRAVIS_REPO_SLUG.git"}; fi
+    - if $APIGEN; then BRANCH=${BRANCH:-"gh-pages"}; fi
+    - if $APIGEN; then APIGEN_BUILD_PATH=${APIGEN_BUILD_PATH:-"/tmp/apigen"}; fi
+    - if $APIGEN; then GIT_AUTHOR_NAME=${GIT_AUTHOR_NAME:-"Travis CI"}; fi
+    - if $APIGEN; then GIT_AUTHOR_EMAIL=${GIT_AUTHOR_EMAIL:-"travis@travis-ci.org"}; fi
+    - if $APIGEN; then git clone --branch "$BRANCH" --depth 1 "$REPOSITORY" "$APIGEN_BUILD_PATH"; fi
+    - if $APIGEN; then yes | vendor/bin/apigen generate -d "$APIGEN_BUILD_PATH"; fi
+    - if $APIGEN; then cd "$APIGEN_BUILD_PATH" || exit 1; fi
+    - if $APIGEN; then git config user.name "$GIT_AUTHOR_NAME"; fi
+    - if $APIGEN; then git config user.email "$GIT_AUTHOR_EMAIL"; fi
+    - if $APIGEN; then git add -A; fi
+    - "if $APIGEN; then git commit -m 'docs: generate API documentation'; fi"
+    - if $APIGEN; then git push origin "$BRANCH"; fi
+    - if $APIGEN; then cd "$BUILD_PATH"; fi
 
 notifications:
     email:
