@@ -63,6 +63,17 @@ $classnames = (new Bem())
     ->get();
 ```
 
+### Class names as string (implicit type conversion)
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+$bem = (new Bem())->block('block')->classname('class');
+
+// 'block class'
+echo htmlspecialchars($bem, ENT_QUOTES, 'UTF-8');
+```
+
 ## Prefixing
 
 ```php
