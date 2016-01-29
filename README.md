@@ -50,18 +50,7 @@ $classname = (new Bem())
     ->value();
 ```
 
-### Explicit Modifiers
-
-```php
-use Ecailles\DomClassName\Bem\Bem;
-
-// 'block--block-modifier__element--element-modifier'
-$classname = (new Bem())
-    ->blockModifier('block-modifier')
-    ->elementModifier('element-modifier')
-    ->block('block')->element('element')
-    ->value();
-```
+## Return Value
 
 ### Class names as array
 
@@ -76,6 +65,19 @@ $classnames = (new Bem())
     ->get();
 ```
 
+### Class names as string
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block--block-modifier__element--element-modifier class1 class2'
+$classnames = (new Bem())
+    ->block('block')->modifier('block-modifier')
+    ->element('element')->modifier('element-modifier')
+    ->classname(['class1', 'class2'])
+    ->value();
+```
+
 ### Class names as string (implicit type conversion)
 
 ```php
@@ -85,6 +87,19 @@ $bem = (new Bem())->block('block')->classname('class');
 
 // 'block class'
 echo htmlspecialchars($bem, ENT_QUOTES, 'UTF-8');
+```
+
+## Explicit Modifiers
+
+```php
+use Ecailles\DomClassName\Bem\Bem;
+
+// 'block--block-modifier__element--element-modifier'
+$classname = (new Bem())
+    ->blockModifier('block-modifier')
+    ->elementModifier('element-modifier')
+    ->block('block')->element('element')
+    ->value();
 ```
 
 ## Prefixing
