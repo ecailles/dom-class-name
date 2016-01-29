@@ -36,6 +36,7 @@ script:
     - composer test-ci
 
 after_script:
+    - mkdir -p build/logs
     - vendor/bin/coveralls --verbose
 
 notifications:
