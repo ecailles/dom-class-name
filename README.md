@@ -71,7 +71,7 @@ $classnames = (new Bem())
 use Ecailles\DomClassName\Bem\Bem;
 
 // 'block--block-modifier__element--element-modifier class1 class2'
-$classnames = (new Bem())
+$classname = (new Bem())
     ->block('block')->modifier('block-modifier')
     ->element('element')->modifier('element-modifier')
     ->classname(['class1', 'class2'])
