@@ -114,7 +114,7 @@
 		<b>Namespace:</b> <a href="namespace-Ecailles.html">Ecailles</a>\<a href="namespace-Ecailles.DomClassName.html">DomClassName</a>\<a href="namespace-Ecailles.DomClassName.Bem.html">Bem</a><br>
 		<b>Package:</b> Ecailles\DomClassName\Bem<br>
 
-			<b>Located at</b> <a href="source-class-Ecailles.DomClassName.Bem.Bem.html#14-318" title="Go to source code">Bem/Bem.php</a>
+			<b>Located at</b> <a href="source-class-Ecailles.DomClassName.Bem.Bem.html#14-513" title="Go to source code">Bem/Bem.php</a>
 		<br>
 	</div>
 
@@ -134,7 +134,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#39-62" title="Go to source code">__construct</a>( <span>string <var>$prefix</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$prefixSeparator</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$elementSeparator</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$modifierSeparator</var> = <span class="php-keyword1">null</span> </span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#66-89" title="Go to source code">__construct</a>( <span>string <var>$prefix</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$prefixSeparator</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$elementSeparator</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$modifierSeparator</var> = <span class="php-keyword1">null</span> </span> )</code>
 
 		<div class="description short">
 			<p>Bem constructor.</p>
@@ -168,24 +168,28 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___toString">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#64-67" title="Go to source code">__toString</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#91-99" title="Go to source code">__toString</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Returns the string representation of the instance.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Returns the string representation of the instance.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>The string representation.
+				</div>
 
 
 
@@ -198,24 +202,35 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>|
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___call">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#69-74" title="Go to source code">__call</a>( <span> <var>$name</var></span>, <span> <var>$arguments</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#101-114" title="Go to source code">__call</a>( <span>string <var>$name</var></span>, <span>mixed[] <var>$arguments</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>The magic method that is triggered when invoking an inaccessible method in an object context.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>The magic method that is triggered when invoking an inaccessible method in an object context.</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>The name of the method being called.</dd>
+					<dt><var>$arguments</var></dt>
+					<dd>The arguments of the method being called.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>|<br>A cloned instance of Bem when the method name is <code>clone</code>.
+				</div>
 
 
 
@@ -228,24 +243,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_prefix">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#76-81" title="Go to source code">prefix</a>( <span> <var>$name</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#116-128" title="Go to source code">prefix</a>( <span>string <var>$name</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Changes the prefix.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Changes the prefix.</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>The prefix to change.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -258,24 +282,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_prefixSeparator">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#83-88" title="Go to source code">prefixSeparator</a>( <span> <var>$separator</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#130-142" title="Go to source code">prefixSeparator</a>( <span>string <var>$separator</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Changes the prefix separator.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Changes the prefix separator.</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$separator</var></dt>
+					<dd>The prefix separator to change.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -288,24 +321,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_block">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#90-97" title="Go to source code">block</a>( <span> <var>$names</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#144-158" title="Go to source code">block</a>( <span>string|string[] <var>$names</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Adds Block name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Adds Block name(s).</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$names</var></dt>
+					<dd>The name(s) to add.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -318,24 +360,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_blockModifier">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#99-105" title="Go to source code">blockModifier</a>( <span> <var>$names</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#160-173" title="Go to source code">blockModifier</a>( <span>string|string[] <var>$names</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Adds Block Modifier name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Adds Block Modifier name(s).</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$names</var></dt>
+					<dd>The Block Modifier name(s) to add.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -348,24 +399,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_element">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#107-114" title="Go to source code">element</a>( <span> <var>$names</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#175-189" title="Go to source code">element</a>( <span>string|string[] <var>$names</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Adds Element name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Adds Element name(s).</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$names</var></dt>
+					<dd>The Element name(s) to add.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -378,24 +438,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_elementSeparator">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#116-121" title="Go to source code">elementSeparator</a>( <span> <var>$separator</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#191-203" title="Go to source code">elementSeparator</a>( <span>string <var>$separator</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Changes the Element separator.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Changes the Element separator.</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$separator</var></dt>
+					<dd>The Element separator to change.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -408,24 +477,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_elementModifier">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#123-129" title="Go to source code">elementModifier</a>( <span> <var>$names</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#205-218" title="Go to source code">elementModifier</a>( <span>string|string[] <var>$names</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Adds Element Modifier name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Adds Element Modifier name(s).</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$names</var></dt>
+					<dd>The Element Modifier name(s) to add.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -438,24 +516,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_modifier">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#131-137" title="Go to source code">modifier</a>( <span> <var>$names</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#220-233" title="Go to source code">modifier</a>( <span>string|string[] <var>$names</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Adds contextual Modifier name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Adds contextual Modifier name(s).</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$names</var></dt>
+					<dd>The contextual Modifier name(s) to add.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -468,24 +555,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_modifierSeparator">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#139-144" title="Go to source code">modifierSeparator</a>( <span> <var>$separator</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#235-247" title="Go to source code">modifierSeparator</a>( <span>string <var>$separator</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Changes the Modifier separator.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Changes the Modifier separator.</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$separator</var></dt>
+					<dd>The Modifier separator to change.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -498,24 +594,33 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code>
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_classname">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#146-152" title="Go to source code">classname</a>( <span> <var>$classes</var></span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#249-262" title="Go to source code">classname</a>( <span>string|string[] <var>$classes</var></span> )</code>
 
 		<div class="description short">
-			
+			<p>Adds plain class name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Adds plain class name(s).</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$classes</var></dt>
+					<dd>The class name(s) to add.</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code><a href="class-Ecailles.DomClassName.Bem.Bem.html">Ecailles\DomClassName\Bem\Bem</a></code><br>The current instance of Bem.
+				</div>
 
 
 
@@ -528,24 +633,28 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_get">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#154-171" title="Go to source code">get</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#264-286" title="Go to source code">get</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Builds and gets the class name(s) as an array.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Builds and gets the class name(s) as an array.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]<br>An array of the class name(s).
+				</div>
 
 
 
@@ -558,24 +667,28 @@
 		<td class="attributes"><code>
 			 public 
 
-			
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_value">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#173-176" title="Go to source code">value</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#288-296" title="Go to source code">value</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Builds and gets the class name(s) as a string.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Builds and gets the class name(s) as a string.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string<br>The class name(s) string.
+				</div>
 
 
 
@@ -588,24 +701,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasBlock">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#178-181" title="Go to source code">hasBlock</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#298-306" title="Go to source code">hasBlock</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Returns whether Block name(s) has/have been added.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Returns whether Block name(s) has/have been added.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True if Block name(s) has/have been added, false otherwise.
+				</div>
 
 
 
@@ -618,24 +735,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getBlockModifiers">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#183-186" title="Go to source code">getBlockModifiers</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#308-316" title="Go to source code">getBlockModifiers</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Gets the Block Modifier name(s) that has/have been added.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Gets the Block Modifier name(s) that has/have been added.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]<br>The Block Modifier name(s).
+				</div>
 
 
 
@@ -648,24 +769,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasBlockModifier">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#188-191" title="Go to source code">hasBlockModifier</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#318-326" title="Go to source code">hasBlockModifier</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Returns whether Block Modifier name(s) has/have been added.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Returns whether Block Modifier name(s) has/have been added.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True if Block Modifier name(s) has/have been added, false otherwise.
+				</div>
 
 
 
@@ -678,24 +803,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasElement">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#193-196" title="Go to source code">hasElement</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#328-336" title="Go to source code">hasElement</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Returns whether Element name(s) has/have been added.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Returns whether Element name(s) has/have been added.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True if Element name(s) has/have been added, false otherwise.
+				</div>
 
 
 
@@ -708,24 +837,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getElementModifiers">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#198-201" title="Go to source code">getElementModifiers</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#338-346" title="Go to source code">getElementModifiers</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Gets the Block Modifier name(s) that has/have been added.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Gets the Block Modifier name(s) that has/have been added.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]<br>The Block Modifier name(s).
+				</div>
 
 
 
@@ -738,24 +871,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasElementModifier">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#203-206" title="Go to source code">hasElementModifier</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#348-356" title="Go to source code">hasElementModifier</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Returns whether Element Modifier name(s) has/have been added.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Returns whether Element Modifier name(s) has/have been added.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True if Element Modifier name(s) has/have been added, false otherwise.
+				</div>
 
 
 
@@ -768,24 +905,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getContextualModifiers">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#208-211" title="Go to source code">getContextualModifiers</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#358-366" title="Go to source code">getContextualModifiers</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Gets the contextual Modifier name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Gets the contextual Modifier name(s).</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]<br>The contextual Modifier name(s).
+				</div>
 
 
 
@@ -798,24 +939,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			boolean
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_hasContextualModifier">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#213-216" title="Go to source code">hasContextualModifier</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#368-376" title="Go to source code">hasContextualModifier</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Returns whether contextual Modifier name(s) has/have been added.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Returns whether contextual Modifier name(s) has/have been added.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					boolean<br>True if contextual Modifier name(s) has/have been added, false otherwise.
+				</div>
 
 
 
@@ -835,14 +980,14 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_mergeContextualModifiers">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#218-231" title="Go to source code">mergeContextualModifiers</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#378-394" title="Go to source code">mergeContextualModifiers</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Merges contextual Modifier name(s) with Block/Element Modifier name(s) based on the current context.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Merges contextual Modifier name(s) with Block/Element Modifier name(s) based on the current context.</p>
 
 
 
@@ -858,24 +1003,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createBlockSet">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#233-241" title="Go to source code">createBlockSet</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#396-409" title="Go to source code">createBlockSet</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Creates a set of the Block name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Creates a set of the Block name(s).</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]<br>The created set of the Block name(s).
+				</div>
 
 
 
@@ -888,24 +1037,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createBlockModifierSet">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#243-250" title="Go to source code">createBlockModifierSet</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#411-423" title="Go to source code">createBlockModifierSet</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Creates a set of the Block Modifier name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Creates a set of the Block Modifier name(s).</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]<br>The created set of the Block Modifier name(s).
+				</div>
 
 
 
@@ -918,24 +1071,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createElementSet">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#252-262" title="Go to source code">createElementSet</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#425-440" title="Go to source code">createElementSet</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Creates a set of the Element name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Creates a set of the Element name(s).</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]<br>The created set of the Element name(s).
+				</div>
 
 
 
@@ -948,24 +1105,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createElementModifierSet">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#264-271" title="Go to source code">createElementModifierSet</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#442-454" title="Go to source code">createElementModifierSet</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Creates a set of the Element Modifier name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Creates a set of the Element Modifier name(s).</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]<br>The created set of the Element Modifier name(s).
+				</div>
 
 
 
@@ -978,24 +1139,28 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			string[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createSets">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#273-296" title="Go to source code">createSets</a>( )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#456-484" title="Go to source code">createSets</a>( )</code>
 
 		<div class="description short">
-			
+			<p>Creates sets of the Block, Element, Modifier name(s) based on the state.</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Creates sets of the Block, Element, Modifier name(s) based on the state.</p>
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					string[]<br>The sets of the items.
+				</div>
 
 
 
@@ -1008,24 +1173,33 @@
 		<td class="attributes"><code>
 			 protected 
 
-			
+			array[]
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_createCartesianProduct">#</a>
-		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#298-317" title="Go to source code">createCartesianProduct</a>( <span>array <var>$sets</var> = []</span> )</code>
+		<code><a href="source-class-Ecailles.DomClassName.Bem.Bem.html#486-512" title="Go to source code">createCartesianProduct</a>( <span>array <var>$sets</var> = []</span> )</code>
 
 		<div class="description short">
-			
+			<p>Creates Cartesian product with given sets of name(s).</p>
 		</div>
 
 		<div class="description detailed hidden">
-			
+			<p>Creates Cartesian product with given sets of name(s).</p>
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sets</var></dt>
+					<dd>The sets of the name(s).</dd>
+				</dl></div>
 
+				<h4>Returns</h4>
+				<div class="list">
+					array[]<br>The created Cartesian product.
+				</div>
 
 
 
@@ -1055,14 +1229,14 @@
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#21" title="Go to source code"><var>$context</var></a>
+				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#21-24" title="Go to source code"><var>$context</var></a>
 
 			<div class="description short">
-				
+				<p>The current context.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The current context.</p>
 
 			</div>
 		</td>
@@ -1076,18 +1250,18 @@
 	<tr data-order="prefix" id="$prefix">
 		<td class="attributes"><code>
 			protected  
-			
+			string|null
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#23" title="Go to source code"><var>$prefix</var></a>
+				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#26-29" title="Go to source code"><var>$prefix</var></a>
 
 			<div class="description short">
-				
+				<p>The prefix.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The prefix.</p>
 
 			</div>
 		</td>
@@ -1101,18 +1275,18 @@
 	<tr data-order="prefixSeparator" id="$prefixSeparator">
 		<td class="attributes"><code>
 			protected  
-			
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#25" title="Go to source code"><var>$prefixSeparator</var></a>
+				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#31-34" title="Go to source code"><var>$prefixSeparator</var></a>
 
 			<div class="description short">
-				
+				<p>The prefix separator.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The prefix separator.</p>
 
 			</div>
 		</td>
@@ -1126,18 +1300,18 @@
 	<tr data-order="blocks" id="$blocks">
 		<td class="attributes"><code>
 			protected  
-			array
+			string[]
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#27" title="Go to source code"><var>$blocks</var></a>
+				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#36-39" title="Go to source code"><var>$blocks</var></a>
 
 			<div class="description short">
-				
+				<p>The Block names.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The Block names.</p>
 
 			</div>
 		</td>
@@ -1151,18 +1325,18 @@
 	<tr data-order="elements" id="$elements">
 		<td class="attributes"><code>
 			protected  
-			array
+			string[]
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#29" title="Go to source code"><var>$elements</var></a>
+				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#41-44" title="Go to source code"><var>$elements</var></a>
 
 			<div class="description short">
-				
+				<p>The Element names.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The Element names.</p>
 
 			</div>
 		</td>
@@ -1176,18 +1350,18 @@
 	<tr data-order="elementSeparator" id="$elementSeparator">
 		<td class="attributes"><code>
 			protected  
-			
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#31" title="Go to source code"><var>$elementSeparator</var></a>
+				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#46-49" title="Go to source code"><var>$elementSeparator</var></a>
 
 			<div class="description short">
-				
+				<p>The Element separator.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The Element separator.</p>
 
 			</div>
 		</td>
@@ -1201,18 +1375,18 @@
 	<tr data-order="modifiers" id="$modifiers">
 		<td class="attributes"><code>
 			protected  
-			array
+			string[]
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#33" title="Go to source code"><var>$modifiers</var></a>
+				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#51-54" title="Go to source code"><var>$modifiers</var></a>
 
 			<div class="description short">
-				
+				<p>The contexts and Modifier names.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The contexts and Modifier names.</p>
 
 			</div>
 		</td>
@@ -1226,18 +1400,18 @@
 	<tr data-order="modifierSeparator" id="$modifierSeparator">
 		<td class="attributes"><code>
 			protected  
-			
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#35" title="Go to source code"><var>$modifierSeparator</var></a>
+				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#56-59" title="Go to source code"><var>$modifierSeparator</var></a>
 
 			<div class="description short">
-				
+				<p>The Modifier separator.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The Modifier separator.</p>
 
 			</div>
 		</td>
@@ -1251,18 +1425,18 @@
 	<tr data-order="classes" id="$classes">
 		<td class="attributes"><code>
 			protected  
-			array
+			string
 		</code></td>
 
 		<td class="name">
-				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#37" title="Go to source code"><var>$classes</var></a>
+				<a href="source-class-Ecailles.DomClassName.Bem.Bem.html#61-64" title="Go to source code"><var>$classes</var></a>
 
 			<div class="description short">
-				
+				<p>The plain class names.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>The plain class names.</p>
 
 			</div>
 		</td>
