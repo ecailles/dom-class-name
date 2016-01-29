@@ -30,6 +30,7 @@
     "require-dev"      : {
         "squizlabs/php_codesniffer": "^2.5.0",
         "crysalead/kahlan"         : "^2.1.0",
+        "satooshi/php-coveralls"   : "^1.0.0",
         "apigen/apigen"            : "^4.1.2"
     },
     "autoload"         : {
@@ -54,7 +55,7 @@
         ],
         "test-ci": [
             "phpcs --colors",
-            "kahlan --src=src --spec=specs --no-header"
+            "kahlan --src=src --spec=specs --clover=clover.xml --no-header"
         ]
     },
     "archive"          : {
@@ -67,6 +68,7 @@
             ".remarkrc",
             "composer.json",
             "phpcs.xml.dist",
+            ".coveralls.yml",
             "/specs/",
             "apigen.neon",
             ".travis.yml"
