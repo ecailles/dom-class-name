@@ -30,7 +30,7 @@ $classname = (new Bem())
 ```php
 use Ecailles\DomClassName\Bem\Bem;
 
-// 'block--block-modifier__element-modifier'
+// 'block--block-modifier__element--element-modifier'
 $classname = (new Bem())
     ->block('block')->modifier('block-modifier')
     ->element('element')->modifier('element-modifier')
@@ -42,7 +42,7 @@ $classname = (new Bem())
 ```php
 use Ecailles\DomClassName\Bem\Bem;
 
-// 'block--block-modifier__element-modifier class1 class2'
+// 'block--block-modifier__element--element-modifier class1 class2'
 $classname = (new Bem())
     ->block('block')->modifier('block-modifier')
     ->element('element')->modifier('element-modifier')
@@ -55,7 +55,7 @@ $classname = (new Bem())
 ```php
 use Ecailles\DomClassName\Bem\Bem;
 
-// ['block--block-modifier__element-modifier', 'class1', 'class2']
+// ['block--block-modifier__element--element-modifier', 'class1', 'class2']
 $classname = (new Bem())
     ->block('block')->modifier('block-modifier')
     ->element('element')->modifier('element-modifier')
