@@ -46,7 +46,7 @@ use Ecailles\DomClassName\Bem\Bem;
 $classname = (new Bem())
     ->block('block')->modifier('block-modifier')
     ->element('element')->modifier('element-modifier')
-    ->classname(['class1', 'class2'])
+    ->class(['class1', 'class2'])
     ->value();
 ```
 
@@ -61,7 +61,7 @@ use Ecailles\DomClassName\Bem\Bem;
 $classnames = (new Bem())
     ->block('block')->modifier('block-modifier')
     ->element('element')->modifier('element-modifier')
-    ->classname(['class1', 'class2'])
+    ->class(['class1', 'class2'])
     ->get();
 ```
 
@@ -74,7 +74,7 @@ use Ecailles\DomClassName\Bem\Bem;
 $classname = (new Bem())
     ->block('block')->modifier('block-modifier')
     ->element('element')->modifier('element-modifier')
-    ->classname(['class1', 'class2'])
+    ->class(['class1', 'class2'])
     ->value();
 ```
 
@@ -83,7 +83,7 @@ $classname = (new Bem())
 ```php
 use Ecailles\DomClassName\Bem\Bem;
 
-$bem = (new Bem())->block('block')->classname('class');
+$bem = (new Bem())->block('block')->class('class');
 
 // 'block class'
 echo htmlspecialchars($bem, ENT_QUOTES, 'UTF-8');

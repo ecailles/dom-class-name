@@ -371,6 +371,35 @@ describe('Bem', function () {
         });
     });
 
+    describe('->class()', function () {
+        context('when the method is invoked', function () {
+            it('returns the same value as classname()', function () {
+                $subject   = $this->bem->class('class');
+                $classname = $this->bem->classname('class');
+
+                expect($subject)->toBe($classname);
+            });
+        });
+
+        context('when a class name is given', function () {
+            it('adds the same class name as classname()', function () {
+                $actual   = $this->bem->class('class')->get();
+                $expected = $this->bem->classname('class')->get();
+
+                expect($actual)->toBe($expected);
+            });
+        });
+
+        context('when multiple class names are given', function () {
+            it('adds the same class names as classname()', function () {
+                $actual   = $this->bem->class(['class1', 'class2'])->get();
+                $expected = $this->bem->classname(['class1', 'class2'])->get();
+
+                expect($actual)->toBe($expected);
+            });
+        });
+    });
+
     describe('->get()', function () {
         context('when any Blocks, Elements and classes have not been set', function () {
             it('returns an empty string', function () {

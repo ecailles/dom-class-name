@@ -16,6 +16,7 @@ use Nette\Http\Context;
  *
  * @package Ecailles\DomClassName\Bem
  *
+ * @methoc Bem class() An alias of classname().
  * @method Bem clone() Clones the current instance of Bem.
  */
 class Bem
@@ -106,12 +107,24 @@ class Bem
      * @param string $name The name of the method being called.
      * @param mixed[] $arguments The arguments of the method being called.
      *
-     * @return Bem|void A cloned instance of Bem when the method name is `clone`.
+     * @return Bem|void The current instance of Bem when the method name is `class`.
+     *                  A cloned instance of Bem when the method name is `clone`.
      */
     public function __call($name, $arguments)
     {
-        if ($name === 'clone') {
-            return clone $this;
+        switch ($name) {
+            case 'class':
+                return call_user_func_array([$this, 'classname'], $arguments);
+
+                break;
+
+            case 'clone':
+                return clone $this;
+
+                break;
+
+            default:
+                break;
         }
     }
 
