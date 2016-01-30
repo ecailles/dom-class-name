@@ -15,6 +15,8 @@ use Nette\Http\Context;
  * Class Bem
  *
  * @package Ecailles\DomClassName\Bem
+ *
+ * @method Bem clone() Clones the current instance of Bem.
  */
 class Bem
 {
