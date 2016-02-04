@@ -16,7 +16,7 @@ use Nette\Http\Context;
  *
  * @package Ecailles\DomClassName\Bem
  *
- * @method Bem class() An alias of classname().
+ * @method Bem class() An alias of `classname()`.
  * @method Bem clone() Clones the current instance of Bem.
  */
 class Bem
