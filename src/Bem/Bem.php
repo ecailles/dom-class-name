@@ -9,8 +9,6 @@
  */
 namespace Ecailles\DomClassName\Bem;
 
-use Nette\Http\Context;
-
 /**
  * Class Bem
  *
